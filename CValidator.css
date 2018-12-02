@@ -1,0 +1,18 @@
+.CValidatorContainer{
+	margin:				0px, 8px, 12px, 8px;
+	width:				260px;
+	vertical-align:		top;
+	border:				2px groove;
+}
+
+.CValidatorItem{
+	display:			block;
+	background-color:	infoBackground;
+	padding:			2px, 2px, 2px, 4px;
+	margin:				2px, 2px, 2px, 2px;
+}
+
+.CValidatorText{
+	font-size:			0.9em;
+	color:				red;
+}

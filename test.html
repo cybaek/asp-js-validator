@@ -1,0 +1,18 @@
+<html>
+<head>
+<script src="Validator.js" language="javascript"></script>
+<script language="javascript">
+function checkAge(curr, value){
+	alert('³ªÀÌ°¡ ' + value);
+	return true;
+}
+</script>
+</head>
+<body>
+<form onsubmit="return checkValues('Rules.xml', this);" action="test.asp">
+	<input type=text name="Age">
+	<input type=text name="Age2">
+	<input type=submit>
+</form>
+</body>
+</html>

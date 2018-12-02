@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Rules>
+	<Rule name="Age">
+		<CompareValidator 
+			Operator="DataTypeCheck" 
+			Type="Integer"
+			ErrorMessage="an invalid number"></CompareValidator>
+		<CompareValidator
+			Operator="LessThanEqual"
+			ValueToCompare="150"
+			Type="Integer"
+			ErrorMessage="150보다 작거나 같아야합니다."></CompareValidator>
+		<CompareValidator
+			Operator="Equal"
+			ControlToCompare="Age2"
+			ErrorMessage="age2와 값이 같아야합니다."></CompareValidator>
+		<CustomValidator
+			OnServerValidate="CheckAge"
+			ClientValidationFunction="checkAge"
+			ErrorMessage="나이가 올바르지 않습니다."></CustomValidator>
+		<LengthValidator 
+			MinimumValue="2"
+			MaximumValue="3"
+			ErrorMessage="2~3자 길이"></LengthValidator>
+		<RequiredFieldValidator ErrorMessage="필수 입력 필드입니다."></RequiredFieldValidator>
+		<RegularExpressionValidator
+			ValidationExpression="^\d{1,3}$"
+			ErrorMessage="숫자로 한자리에서 세자리까지 입력가능합니다."></RegularExpressionValidator>
+		<RangeValidator
+			Type="Integer"
+			MinimumValue="5"
+			MaximumValue="70"
+			ErrorMessage="5부터 70까지 입력가능!!"></RangeValidator>
+	</Rule>
+</Rules>
+<!--
+http://msdn.microsoft.com/library/default.asp?url=/library/en-us/xmlsdk/htm/dom_howdoi_7upf.asp
+
+CompareValidator
+===========
+Type
+	Currency
+	Date
+	Double
+	Integer
+	String
+Operator
+	DataTypeCheck
+	Equal
+	GreaterThan
+	GreaterThanEqual
+	LessThan
+	LessThanEqual
+	NotEqual
+-->
